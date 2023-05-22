@@ -14,9 +14,14 @@ const HomeSidebar = ({ pageNumber = 1 }: any) => {
   }, [pageNumber]);
 
   return (
-    <div className="fixed top-0 flex  flex-col  p-4 w-fit h-screen justify-between ">
+    <div className="fixed top-0 flex  flex-col  p-4 w-fit h-screen space-y-40 border-gray-500 ">
       {/* <LogoWithName width={40} height={40} /> */}
-      <div className="flex flex-col space-y-4">
+
+
+      <h1>
+        hellooo
+      </h1>
+      <div className="flex flex-col ">
         <SidebarItem
           icon="home"
           Icon={DashboardIcon}
@@ -71,19 +76,16 @@ const HomeSidebar = ({ pageNumber = 1 }: any) => {
 const SidebarItem = ({ text, Icon, active, onClick, className }: any) => {
   return (
     <div
-      className={`flex w-fit items-center p-4 cursor-pointer text-zinc-500 ${
-        active ? "bg-black rounded-full " : ""
-      }`}
+      className={`flex w-fit items-center p-2 cursor-pointer justify-between gap-3 text-zinc-500 `}
       onClick={onClick}
     >
       <span
-        className={`material-icons-outlined stroke-2  ${
-          active ? "material-icons-round text-white" : ""
-        }`}
+        className={`material-icons-outlined stroke-2 `}
       >
         <Icon />
       </span>
-      {/* <h3 className="font-medium ml-2 text-zinc-700">{text}</h3> */}
+
+       <h3 className={`font-medium ml-2 text-zinc-400 ${active ? " text-gray-700":""}`}>{text}</h3> 
     </div>
   );
 };

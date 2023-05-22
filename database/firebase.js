@@ -8,15 +8,13 @@ let app;
 if (!getApps().length) {
   app = initializeApp(
     {
-      apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-      authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-      messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-      appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-      measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-    },
-    "gyanaguru"
+apiKey: "AIzaSyDkw5kEseKgrPHPHXVL9wllnb-ghjHtk1c",
+  authDomain: "code-98bc2.firebaseapp.com",
+  projectId: "code-98bc2",
+  storageBucket: "code-98bc2.appspot.com",
+  messagingSenderId: "342168547219",
+  appId: "1:342168547219:web:0007e03923964c1209c266"    },
+    "code"
   );
 } else {
   app = getApps()[0]; // if already initialized, use that one
